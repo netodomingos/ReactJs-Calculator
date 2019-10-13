@@ -1,0 +1,64 @@
+body{
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+    background: linear-gradient(to left, rgb(182, 182, 182),rgb(32, 32, 32) );
+    font-family: 'RobotoMono', monospace;
+}
+
+@font-face{
+    font-family: 'RobotoMono';
+    src: url('./RobotoMono-Thin.ttf')
+}
+
+.calculator{
+    height: 320px;
+    width: 235px;
+    border-radius: 5px;
+    overflow: hidden;
+    display: grid;
+    grid-template-columns: repeat(4, 25%);
+    grid-template-rows: 1fr 48px 48px 48px 48px 48px;
+    box-shadow: 5px 5px rgb(15, 15, 15);
+}
+.button{
+    background-color: #f0f0f0;
+    font-size: 1.4em;
+    border: none;
+    border-right: solid 1px #888;
+    border-bottom: solid 1px #888; 
+    outline: none;
+}
+
+.button:active{
+    background-color: #888
+}
+
+.button.double{
+    grid-column: span 2;
+
+}
+.button.triple{
+    grid-column: span 3;
+}
+.button.operation{
+    background-color: rgb(209, 155, 53);
+    color: #fff;
+    text-decoration: bold;
+}
+.button.operation:active{
+    background-color: rgb(145, 102, 22);
+}
+
+.display{
+    grid-column: span 4;
+    background-color: rgba(0, 0, 0, 0.932);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 20px;
+    font-size: 2.3em
+}
